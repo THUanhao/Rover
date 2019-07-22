@@ -144,7 +144,7 @@ arm_checks 是解锁检查. 这里面涉及到的传感器参数全部设置好�
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE3.JPG)
 把参数改为0， 点击 Write Params
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE4.JPG)
-当我们完成写入参数的任务后，我们需要重新启动飞控，然后我们回到 FLIGHT DATA界面，可以看到已经解锁成功。
+当我们完成写入参数的任务后，我们需要重新启动飞控，然后我们回到 FLIGHT DATA界面，可以看到已经解锁成功.
 
 ## 四 解锁
 ### 4.1 确认解锁
