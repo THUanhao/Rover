@@ -7,3 +7,4 @@
 
 ### 1.2 下载固件
 下图为APM2下载固件界面，APM2目前只提供 ArduRover 3.4.2版本
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E5%9B%BA%E4%BB%B6%E5%AE%89%E8%A3%85.JPG)
