@@ -46,3 +46,81 @@
 
 ### 2.2 罗盘校准
 如下图, 罗盘未校准完成时, OFFSET的数值均为红色（因为我们的飞控有一个罗盘， 还有一个磁罗盘）. 所以我们需要校准的是两个罗盘分别对应下方的 Mag1 & Mag2
+#### 开始校准前请插上GPS模块并遵从上图的所有选项以避免罗盘校准失误，且罗盘校准对周围环境要求很高，在我多次尝试失败后，在开阔地等磁性较小的地方校准最为准确。
+点击 Pixhawk/PX4
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%82%B9%E5%87%BB%E6%A0%A1%E5%87%86%E7%BD%97%E7%9B%98.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E6%A1%86.JPG)
+
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E7%95%8C%E9%9D%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.JPG)
+开始校准
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E5%BC%80%E5%A7%8B.JPG)
+#### 注意，Pixhawk罗盘的磁性非常敏感，尽量不要把罗盘放在距离磁性物质很近的地方，以免发生罗盘短暂失效或永久失效的情况发生
+下图为错误的“罗盘校准成功”界面， 正是因为罗盘短暂失效，所以没有第2个罗盘的读数，一定要注意
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E6%88%90%E5%8A%9F.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E6%88%90%E5%8A%9F2.JPG)
+#### 罗盘校准经过总结后得出, 罗盘设定中一共6个面，共3个维度，但只要取6个面中的3个覆盖3个维度即可，对着地面，依次顺时针转几圈再逆时针转几圈重复此动作直到罗盘校准提示成功
+下面图示诶正确的罗盘校准过程
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E6%A0%A1%E5%87%86%E8%BF%87%E7%A8%8B%E6%9B%B4%E6%96%B0.JPG)
+有可能会出现2个进度条一个充满另一个不满的情况，这是正常情况，充满的进度条会重新采集数据，持续转动飞控，直到两个进度条都充满为止，并弹出以下窗口，才算是成功.
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E7%BD%97%E7%9B%98%E7%9C%9F%E6%AD%A3%E6%A0%A1%E5%87%86%E6%88%90%E5%8A%9F.JPG)
+#### 注意
+点击OK后要给飞控完全断电，然后重新连接飞控至电脑，再点击地面站的右上角，此时才能看到两个罗盘的坐标值都为绿色
+
+### 2.3遥控器校准
+点击左侧的 Radio Calibration， 开始进行遥控器校准作业 注意，此时一定要把接收机连接上飞控
+校准前的步骤
+1. 正确连接接收机
+2. 打开遥控器, 并讲遥控器和接收机对码连接
+3. 连接正常后，地面站和遥控器如图显示
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E7%95%8C%E9%9D%A2.JPG)
+点击 Calibrate Radio, 弹出对话框. 提示为确认无人车处于启动状态， 并且接收机已经供电并且连接飞控（为了安全保证， 让轮子悬空，即使出现意外情况转起来也不会造成伤害）
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E5%AF%B9%E8%AF%9D%E6%A1%86.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E5%AF%B9%E8%AF%9D%E6%A1%862.JPG)
+根据上图提示，点击OK之后，拨动遥控器的所有摇杆和开关到他们的极限位置，然后会显示他们的极限数值
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E5%99%A8%E6%A0%A1%E5%87%86%E5%AE%8C%E6%88%90.JPG)
+点击OK后， 地面站会将得到的数据写入飞控
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E5%99%A8%E6%A0%A1%E5%87%86%E5%AE%8C%E6%88%902.JPG)
+至此，遥控器校准全部完成
+
+### 2.4 设置飞行模式
+我们使用的遥控器有多种飞行模式可以选择，在飞行模式设置完成后，我们可以在小车测试时直接通过我们的遥控器来选择不同的小车行驶模式，这其中包含了如自动行驶，自动返航等模式。我们只需在下列的模式选项表中分配好（1-6）分别对应的行驶模式
+如下图所示， 当前的PWM： 8:1526 （当前的mode设置使用的PWM通道是8通道，当前值是1526)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%A3%9E%E8%A1%8C%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE1.JPG)
+转动我们遥控器上方的两个旋钮，会发现屏幕上绿色光标会相应的移动，根据遥控器上相应的通道具有的档位数量，可以设置不同数量的飞行模式. 点击绿色光标所在的下拉窗口，可以选择不同的飞行模式.
+Manual 手动
+Auto 自动
+RTL 自动返航，走直线到初始位置
+Hold 保持当前位置
+SmartRTL 自动返航，走原始路线返航到初始位置
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%A3%9E%E8%A1%8C%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE2.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%A3%9E%E8%A1%8C%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE%E5%AE%8C%E6%88%90.JPG)
+
+### 2.5 Servo Output
+![image](https://github.com/wzezhong/Rover/blob/master/images/Servo%20Output.JPG)
+该界面左侧一列和故障保护界面右侧一列的电机输出功能类似。不同的是，功能侧重点不一样。该界面主要侧重于输出通道的设置。解释如下
+Position当前通道的输出数值大小
+Rever 通道反向。点击后输出的 PWM 波反向。
+Function当前通道输出的函数。
+Min当前通道可以输出 PWM 信号数值的最小值
+Trim当前通道可以输出 PWM 信号数值的中间值
+Max当前通道可以输出 PWM信号数值的最大值
+
+### 2.6 故障保护
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%95.JPG)
+在故障保护界面， 左边的一列显示的是遥控器的输入， 右边一列显示电机输出， 显示的是飞控的 I/O 输出的信号，不用连接电机, 在该界面也可以看到飞控的输出是否正常（在解锁模式下，拨动遥控器的摇杆会有输出显示）
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%951%E4%BF%A1%E9%81%93.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%952.JPG)
+
+## 三 设置参数
+### 3.1 全部参数列表
+点击 CONFIG/TUNNING进入调试界面， 然后会发现没有高级参数和全部参数等项，点击 Planner 然后按照图中所示，下拉选择 Advanced. 选择之后会发现没什么变化，然后我们需要切换到其他界面，例如切换到 FLIGHT DATA界面，之后再点击 CONFIG/TUNNING, 会发现左侧列表如下图所示
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E6%89%93%E5%BC%80%E5%85%A8%E9%83%A8%E5%8F%82%E6%95%B0.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E9%AB%98%E7%BA%A7%E5%8F%82%E6%95%B0.JPG)
+点击 Full Parameter List， 如下图所示， 点击OK
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95%E4%B9%8B%E5%85%A8%E9%83%A8%E5%8F%82%E6%95%B0%E8%A1%A8.JPG)
+由上图可以看出全部参数列表中的布局
+1， 第一列是各种参数（命令）的名称
+2， 第二列是参数的设置值
+3， 第三列是参数的单位
+4， 第四列是参数的值可以选择那些参数。只有在选项里面的参数才是有意义的。
+5， 第五列是参数的含义，作用描述。
