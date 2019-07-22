@@ -8,3 +8,5 @@
 ### 1.2 下载固件
 下图为APM2下载固件界面，APM2目前只提供 ArduRover 3.4.2版本
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E5%9B%BA%E4%BB%B6%E5%AE%89%E8%A3%85.JPG)
+下图为 Mission Planner的下载固件界面，在途中我们可以看到 Mission Planner的固件种类更为丰富，而且版本较新，推荐使用 Mission Planner 来作为地面站和固件下载平台
+![image](https://github.com/wzezhong/Rover/blob/master/images/MP.JPG)
