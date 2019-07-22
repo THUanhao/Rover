@@ -73,10 +73,10 @@
 2. 打开遥控器, 并讲遥控器和接收机对码连接
 3. 连接正常后，地面站和遥控器如图显示
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E7%95%8C%E9%9D%A2.JPG)
-点击 Calibrate Radio, 弹出对话框. 提示为确认无人车处于启动状态， 并且接收机已经供电并且连接飞控（为了安全保证， 让轮子悬空，即使出现意外情况转起来也不会造成伤害）
+点击 Calibrate Radio, 弹出对话框. 提示为确认无人车处于启动状态， 并且接收机已经供电并且连接飞控（为了安全保证， 让轮子悬空，虽然在遥控器校准阶段整个飞控处于锁定状态， 但是以防出现意外情况转在遥控器校准阶段轮子动起来）
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E5%AF%B9%E8%AF%9D%E6%A1%86.JPG)
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E6%A0%A1%E5%87%86%E5%AF%B9%E8%AF%9D%E6%A1%862.JPG)
-根据上图提示，点击OK之后，拨动遥控器的所有摇杆和开关到他们的极限位置，然后会显示他们的极限数值
+根据上图提示，点击OK之后，拨动遥控器的所有摇杆和开关到他们的极限位置，然后会显示他们的极限数值（拨动相应的拨杆屏幕上会显示对应通道的变化）
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E5%99%A8%E6%A0%A1%E5%87%86%E5%AE%8C%E6%88%90.JPG)
 点击OK后， 地面站会将得到的数据写入飞控
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E9%81%A5%E6%8E%A7%E5%99%A8%E6%A0%A1%E5%87%86%E5%AE%8C%E6%88%902.JPG)
@@ -107,7 +107,7 @@ Max当前通道可以输出 PWM信号数值的最大值
 
 ### 2.6 故障保护
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%95.JPG)
-在故障保护界面， 左边的一列显示的是遥控器的输入， 右边一列显示电机输出， 显示的是飞控的 I/O 输出的信号，不用连接电机, 在该界面也可以看到飞控的输出是否正常（在解锁模式下，拨动遥控器的摇杆会有输出显示）
+在故障保护界面， 左边的一列显示的是遥控器的输入， 右边一列显示电机输出， 显示的是飞控的 I/O 输出的信号，不用连接电机, 在该界面也可以看到飞控的输出是否正常（当完成解锁后下，拨动遥控器的摇杆才会会有输出显示）
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%951%E4%BF%A1%E9%81%93.JPG)
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E6%95%85%E9%9A%9C%E4%BF%9D%E6%8A%A4%E8%B0%83%E8%AF%952.JPG)
 
