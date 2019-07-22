@@ -23,3 +23,5 @@
 ### 2.1 加速度计校准
 首先连接地面站， 下载好固件之后，点击右上角的连接标志，在成功连接之后会出现下面的图示， 此时在安装固件截面会出现以下的提示，证明此时的连接已经成功
 ![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%BF%9E%E6%8E%A5%E6%8F%90%E7%A4%BA.JPG)
+接下来开始校准加速度计， 点击INITIAL SETUP --→ Mandatory Hardware --→ Accel Calibration
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E5%8A%A0%E9%80%9F%E5%BA%A6%E8%AE%A1%E6%A0%A1%E5%87%86%E7%95%8C%E9%9D%A2.JPG)
