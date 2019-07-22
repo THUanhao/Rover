@@ -124,3 +124,35 @@ Max当前通道可以输出 PWM信号数值的最大值
 3， 第三列是参数的单位
 4， 第四列是参数的值可以选择那些参数。只有在选项里面的参数才是有意义的。
 5， 第五列是参数的含义，作用描述。
+
+### 3.2 设置输出通道
+设置目标：1号输出通道控制左边电机；3号输出通道控制右边电机。
+搜索servo1，找到SERVO1_FUNCTION参数，默认值是26。在我们的无人车上使用，并且是差速转向，那么，这个值应该设置成73. 在后面的列表中有相对应的解释
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%AE%BE%E7%BD%AE%E8%BE%93%E5%87%BA%E9%80%9A%E9%81%93%E5%87%BD%E6%95%B01.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%AE%BE%E7%BD%AE.JPG)
+搜索servo3，找到SERVO3_FUNCTION参数，默认值是70。在我们的无人车上使用，并且是差速转向，这个值应该设置成74
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%AE%BE%E7%BD%AE%E8%BE%93%E5%87%BA%E9%80%9A%E9%81%93%E5%87%BD%E6%95%B03.JPG)
+#### 注意： 直接在表中值的那一列，键入所需要的值就好。每次设置完所有的参数后，点击 Write Params 按钮，飞控可能会提示重启飞控，重启飞控就好。重启飞控会重新刷写飞控内存中的数据，如果写入参数后，飞控没有按照的意愿动作，那么可以重启飞控再看看效果—将飞控彻底断电后再重新供电
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%AE%BE%E7%BD%AE%E9%80%9A%E9%81%93%E5%87%BD%E6%95%B0%E4%B9%8B%E5%86%99%E5%85%A5%E5%8F%82%E6%95%B0.JPG)
+
+### 3.3 解锁参数设置
+arm_checks 是解锁检查. 这里面涉及到的传感器参数全部设置好了，才可以解锁. Arm_require 是解锁的必要条件，比如说油门拉到最小值从而设置解锁的动作
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE1.JPG)
+因为我在室内调试无人车，所以没有GPS的信号，因此飞控无法解锁. 但是我们的无人车速度并不快，所以为了调试的方便，把这两个值设为0
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE2.JPG)
+紧接着，搜索 safe，然后找到参数 BRD_SAFETYENABLE, 该参数用来设置是否使用安全开关
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE3.JPG)
+把参数改为0， 点击 Write Params
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE4.JPG)
+当我们完成写入参数的任务后，我们需要重新启动飞控，然后我们回到 FLIGHT DATA界面，可以看到已经解锁成功。
+
+## 四 解锁
+### 4.1 确认解锁
+我们重新回到 INITIAL SETUP界面，会发现如图所示为解锁成功。
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E6%88%90%E5%8A%9F1.JPG)
+
+### 4.2 解锁检查验证
+此时，为了验证我们是否成功解锁，我们可以拨动遥控杆，看电机的输出是否有变化，如果产生相对应的变化，则证明解锁成功，上图所示可以明显看到信道3加大，右边的电机输出增加，为测试所有的操作是否正确，我进行了以下测试
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E6%88%90%E5%8A%9F2.JPG)
+![image](https://github.com/wzezhong/Rover/blob/master/images/%E8%A7%A3%E9%94%81%E6%88%90%E5%8A%9F3.JPG)
+至此，完成了小车的所有校准工作和小车运行起来的所有工作
