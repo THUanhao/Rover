@@ -34,3 +34,13 @@ Combining (4) with equation (3)
 #### Pk = FkPk-1Fk′        ⑸  
 
 ## Fourth
+#### External Influence (Outside thing would be affect the system)
+Following the upper example: woth an acceleration a
+Pk = Pk-1 + ∆t*Vk-1 + ½a∆t²
+Vk = Vk-1 + at
+In matrix form: 
+Xk = FkXk-1 + [ ½∆t² \\ ∆t] * a
+Xk = FkXk-1 + Bk Uk            ⑹
+Bk is calld the control matrix and Uk is the control vector
+
+#### External 
