@@ -43,4 +43,27 @@ Xk = FkXk-1 + [ ½∆t² \\ ∆t] * a
 Xk = FkXk-1 + Bk Uk            ⑹
 Bk is calld the control matrix and Uk is the control vector
 
-#### External 
+#### External Uncertainty (Something we aren't keeping track)
+Each point in Xk-1 is moved to somewhere inside a Gaussian Blob with covariance Qk (Unctracked influences as noise with covariance Qk)
+This produces a new Gaussian blob with a different covariance
+*Xk = FkXk-1 + BkUk
+Pk = FkXk-1Fk' + Qk      (7)
+The new Best estimate is a prediction made from previous best estimate, plus a correction for known external influences  
+The new uncertainty is predicted from the old uncertainty with same additional uncertainty from the enviroment  
+
+## Fifth
+#### Refining the estimate with measurements
+1. Each sensors tell us something indirect about the state. In other words, the sensors operate on a state and produce a set of readings  
+2. Hk is the value which will change the state value to a type of value that sensors could reading.
+
+Distribution of sensor readings
+Uexpected = Hk*Xk
+∑expected = HkPkHk'          (8)
+Sensor noise covariance Rk  
+The distribution has a mean equal to the reading we obeserved which we will call ∑k  
+Two Gaussian blobs: One surrounding the mean of our transformed prediction and one surrounding the actual sensor reading we got  
+
+## Sixth
+#### Combining Gaussians
+
+
