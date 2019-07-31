@@ -13,12 +13,12 @@ Structure: (1) Xk is a state function whihc is just a list of numbers about the 
 ### Example
 Describling the problem with matrices. Call best estimate Xk (the mean, elsewhere named u) and covariance matirx Pk  
 Xk =  
-$$
+
 \begin{bmatrix}
 position\\
 velocity
 \end{bmatrix}\tag{4}
-$$
+
 (2x2 Matrix)Pk = [∑pp ∑pv  
 ∑vp ∑vv]                ⑴  
       
