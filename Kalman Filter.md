@@ -65,5 +65,6 @@ Two Gaussian blobs: One surrounding the mean of our transformed prediction and o
 
 ## Sixth
 #### Combining Gaussians
-
+![image](https://github.com/wzezhong/Rover/blob/master/images/WechatIMG4.jpeg)
+![image](https://github.com/wzezhong/Rover/blob/master/images/WechatIMG5.jpeg)
 
